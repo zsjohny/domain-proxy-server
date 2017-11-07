@@ -6,23 +6,27 @@
 DOCKER_VERISON=`docker  --version`
 COMPOSE_VERISON=`docker-compose  --version`
 
-# 确认系统版本
+echo 请确认您的系统是Linux
+sleep 10s
+
 if test `docker  --version| grep -c 17` -eq 1
 then
-    echo  You already intall docker to latest version, $DOCKER_VERISON
+    echo  '您已经安装最新版本docker, $DOCKER_VERISON'
 else
-    echo 'You need install docker to latest version,please run update_docker_from_offcial.sh'
+    echo '您需要安装最新版本docker,请运行 update_docker_from_offcial.sh'
 
 fi
 
 if test `docker-compose --version| grep -c 1.15.0` -eq 1
 then
-    echo  You already intall docker-compose to latest version, $COMPOSE_VERISON
+    echo  '您已经安装最新版本docker-compose, $COMPOSE_VERISON'
 else
-    echo 'You need install docker-compose to latest version, please run update_docker-compose.sh'
+    echo '您需要安装最新版本docker-compose,请运行update_docker-compose.sh'
 
 fi
 
-#sleep 1s
 
 # Prepare Image
+
+echo '正在准备二级域名代理服务'
+sh ../docker/deploy.sh
