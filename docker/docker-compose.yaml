@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  nginx:
+    image: $DOCKER_REGISTRY_URL/$DOCKER_IMAGE_NAME:$VERSION
+    ports:
+      - "80:80"
+#    command: nginx -s reload
+#    volumes:
+#      - $NGINX_CONFD:/etc/nginx/conf.d/
