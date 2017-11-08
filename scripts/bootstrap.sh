@@ -22,7 +22,7 @@ then
     echo '您已经安装最新版本docker-compose', $COMPOSE_VERISON
 else
     echo '您需要安装最新版本docker-compose,请运行update_docker-compose.sh'
-    sh update_docker-compose.sh
+    ./update_docker-compose.sh
 fi
 
 
