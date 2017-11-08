@@ -29,7 +29,7 @@ fi
 # Prepare Image
 echo -e "\033[33m 正在准备二级域名代理服务...... \033[0m"
 
-sh ../docker/deploy.sh
+../docker/deploy.sh
 
 if [ $? -eq 0 ]
 then
