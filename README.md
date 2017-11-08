@@ -5,4 +5,4 @@
 
 请确保用户有root权限
 
-        curl -o domain-init.sh -L https://raw.githubusercontent.com/zsjohny/domain-proxy-server/develop/bootstrap/init.sh && sh domain-init.sh
+        curl -o domain-init.sh -L https://raw.githubusercontent.com/KuickDeal/domain-proxy-server/develop/bootstrap/init.sh && sh domain-init.sh
