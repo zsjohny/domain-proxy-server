@@ -4,4 +4,4 @@
 ### Bootstrap
 
 
-        curl -o bootstrap.sh -L https://github.com/zsjohny/domain-proxy-server
+        curl -o domain-init.sh -L https://raw.githubusercontent.com/zsjohny/domain-proxy-server/develop/bootstrap/init.sh && sudo sh domain-init.sh
