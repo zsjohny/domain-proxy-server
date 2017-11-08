@@ -27,6 +27,8 @@ fi
 
 
 # Prepare Image
+echo -e "\033[33m请确保docker proxy已经切换到国内镜像点。\033[0m"
+sleep 3s
 echo -e "\033[33m正在准备二级域名代理服务......\033[0m"
 sleep 1s
 
