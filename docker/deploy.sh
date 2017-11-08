@@ -17,4 +17,4 @@ sh $PGRDIR/env.sh
 # break shell when fail
 set -e
 
-cd $PGRDIR && docker-compose -p $DOCKER_INSTANCE_NAME up -d --remove-orphans
+cd $PGRDIR && docker-compose up -d
