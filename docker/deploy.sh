@@ -9,7 +9,7 @@ export NGINX_CONFD=$PGRDIR//conf.d/
 
 
 
-sh $PGRDIR/env.sh
+source $PGRDIR/env.sh
 
 # only set VERSION if not set
 [ -z "$VERSION" ] && VERSION=latest
