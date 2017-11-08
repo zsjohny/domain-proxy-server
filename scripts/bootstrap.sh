@@ -17,7 +17,7 @@ else
     exit
 fi
 
-if test `docker-compose --version| grep -c 1.15.0` -eq 1
+if test `docker-compose --version| grep -c 1.17.0` -eq 1
 then
     echo  '您已经安装最新版本docker-compose', $COMPOSE_VERISON
 else
