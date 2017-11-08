@@ -6,7 +6,7 @@ export PGRDIR=$(cd `dirname $0`; pwd)
 export WORKSPACE=$PGRDIR/../
 export VERSION=$1
 
-source $PGRDIR/env.sh
+sh $PGRDIR/env.sh
 
 # only set VERSION if not set
 [ -z "$VERSION" ] && VERSION=latest
