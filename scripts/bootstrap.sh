@@ -17,13 +17,13 @@ else
     exit
 fi
 
-if test `docker-compose --version| grep -c 1.17.0` -eq 1
-then
-    echo '您已经安装最新版本docker-compose', $COMPOSE_VERISON
-else
-    echo '您需要安装最新版本docker-compose,请运行update_docker-compose.sh'
-    ./update_docker-compose.sh
-fi
+# if test `docker-compose --version| grep -c 1.17.0` -eq 1
+# then
+#     echo '您已经安装最新版本docker-compose', $COMPOSE_VERISON
+# else
+#     echo '您需要安装最新版本docker-compose,请运行update_docker-compose.sh'
+#     ./update_docker-compose.sh
+# fi
 
 
 # Prepare Image
