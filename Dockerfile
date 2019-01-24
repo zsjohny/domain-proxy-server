@@ -2,6 +2,13 @@ FROM alpine:3.5
 
 MAINTAINER Johny.Zheng <shun.johny@gmail.com>>
 
+# Update apk mirror
+RUN cp /etc/apk/repositories /etc/apk/repositories.bak
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+
+# Install tools
+RUN apk update && apk add curl
+
 ENV NGINX_VERSION 1.12.1
 
 RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
