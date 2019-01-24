@@ -9,26 +9,18 @@ COMPOSE_VERISON=`docker-compose  --version`
 echo 请确认您的系统是Linux
 sleep 5s
 
-if test `docker  --version| grep -c 17` -eq 1
+which docker
+if [ $? -eq 0 ]
 then
-    echo '您已经安装最新版本docker', $DOCKER_VERISON
+    echo '您已经安装docker'
 else
-    echo '您需要安装最新版本docker,请运行 update_docker_from_offcial.sh'
+    echo '您需要安装docker,请运行 update_docker_from_offcial.sh'
     exit
 fi
 
-# if test `docker-compose --version| grep -c 1.17.0` -eq 1
-# then
-#     echo '您已经安装最新版本docker-compose', $COMPOSE_VERISON
-# else
-#     echo '您需要安装最新版本docker-compose,请运行update_docker-compose.sh'
-#     ./update_docker-compose.sh
-# fi
-
-
 # Prepare Image
 echo -e "\033[33m请确保docker proxy已经切换到国内镜像点。\033[0m"
-sleep 3s
+sleep 1s
 echo -e "\033[33m正在准备二级域名代理服务......\033[0m"
 sleep 1s
 
